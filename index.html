@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luciano Porolli | Portafolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="cursor-bg" aria-hidden="true"></div>
+  <!-- Barra superior / Navegación -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio" aria-label="Ir a inicio">LP</a>
+      <nav class="nav" aria-label="Principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#referencias">Referencias</a>
+        <a href="#contacto" class="btn small">Contacto</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">🌗</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero / Presentación -->
+  <section class="hero" id="inicio">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <h1>Hola, soy <span class="accent">Luciano</span>.</h1>
+        <p>Estudiante de Programación Web. Construyo sitios claros, accesibles con <strong>HTML</strong> y <strong>CSS</strong>.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="#proyectos">Ver proyectos</a>
+          <a class="btn ghost" href="#contacto">Escribime</a>
+        </div>
+      </div>
+      <aside class="hero-card card">
+        <img src="img/yoPlaya.JPG" alt="Foto de perfil" class="avatar" />
+        <ul class="facts">
+          <li>Nombre: <strong>Luciano Andres Porolli Muri</strong></li>
+          <li>Intereses: HTML · CSS · JS</li>
+          <li>Ciudad: San Juan — Argentina</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <main>
+    <!-- Sobre mí -->
+    <section id="sobre-mi" class="section">
+      <div class="container two-col">
+        <div>
+          <h2>Sobre mí</h2>
+          <p>Me enfoco en buenas prácticas: HTML , estructura clara, navegación simple y estilos ordenados. .</p>
+          <ul class="check">
+            <li>Estructura HTML5: <code>header, nav, main, section, footer</code></li>
+            <li>Modelo de caja: <code>margin, padding, border</code></li>
+            <li>Layouts con Flex y Grid</li>
+            <li>Responsive con <code>meta viewport</code> y unidades relativas</li>
+          </ul>
+        </div>
+        <aside class="card">
+          <h3>Datos de contacto</h3>
+          <p>Mail: <a href="mailto:l.porolli@hotmail.com">l.porolli@hotmail.com</a></p>
+          <p>Instagram: <a href="https://instagram.com/lporolli" target="_blank" rel="noopener">@lporolli</a></p>
+          <p>WhatsApp: <a href="https://wa.me/5492644849224" target="_blank" rel="noopener">+54 9 2644849224</a></p>
+
+        </aside>
+      </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section id="proyectos" class="section alt">
+      <div class="container">
+        <h2>Proyectos</h2>
+        <div class="grid cards">
+          <article class="card project">
+            <header class="project-header">
+              <h3>HTML + CSS básico</h3>
+              <button class="toggle" aria-expanded="false">Ver más</button>
+            </header>
+            <div class="project-body">
+              <p>Estructura HTML, listas, tablas, imágenes y estilos de tipografía/colores.</p>
+              <ul class="tags"><li>HTML5</li><li>CSS3</li></ul>
+            </div>
+          </article>
+
+          <article class="card project">
+            <header class="project-header">
+              <h3>Formulario accesible</h3>
+              <button class="toggle" aria-expanded="false">Ver más</button>
+            </header>
+            <div class="project-body">
+              <p>Inputs comunes, validación nativa, atributos <code>required</code> y <code>pattern</code>.</p>
+              <ul class="tags"><li>Form</li><li>Validación</li></ul>
+            </div>
+          </article>
+
+          <article class="card project">
+            <header class="project-header">
+              <h3>Layout responsive</h3>
+              <button class="toggle" aria-expanded="false">Ver más</button>
+            </header>
+            <div class="project-body">
+              <p>Diseño flexible con Flexbox y Grid, ajustable a móvil y escritorio.</p>
+              <ul class="tags"><li>Flexbox</li><li>Grid</li></ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Referencias / Calificaciones -->
+    <section id="referencias" class="section">
+      <div class="container">
+        <h2>Referencias</h2>
+        <div class="card testimonial">
+          <p>“Buen orden del código y diseño consistente.”</p>
+          <button class="toggle-ref" aria-expanded="false">Mostrar/ocultar detalle</button>
+          <div class="ref-detail">
+            <p>Se aplicaron correctamente etiquetas semánticas, uso de CSS modular y diseño responsive.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="section">
+      <div class="container two-col">
+        <div>
+          <h2>Contacto</h2>
+          <form id="contactForm" class="form" novalidate>
+            <label>Nombre
+              <input type="text" name="nombre" placeholder="Tu nombre" required>
+            </label>
+            <label>Email
+              <input type="email" name="email" placeholder="tu@email.com" required>
+            </label>
+            <label>Mensaje
+              <textarea name="mensaje" rows="4" placeholder="Escribí tu mensaje"></textarea>
+            </label>
+            <button type="submit" class="btn primary">Enviar</button>
+            <p class="feedback" id="formFeedback" role="alert" aria-live="polite"></p>
+          </form>
+        </div>
+        <aside class="card">
+          <h3>También en</h3>
+          <ul class="links">
+            <li><a href="mailto:l.porolli@hotmail.com">Correo</a></li>
+            <li><a href="https://instagram.com/lporolli" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://wa.me/5492644849224" target="_blank" rel="noopener">WhatsApp</a></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> · Luciano A. Porolli · Portafolio</p>
+      <a href="#top" class="to-top" id="toTop" aria-label="Volver arriba">▲</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
