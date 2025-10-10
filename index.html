@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -27,7 +28,7 @@
   </header>
 
   <!-- Hero / Presentación -->
-  <section class="hero" id="inicio">
+  <section class="section" id="sobre-mi">
     <div class="container hero-inner">
       <div class="hero-copy">
         <h1>Hola, soy <span class="accent">Luciano</span>.</h1>
@@ -62,13 +63,6 @@
             <li>Responsive con <code>meta viewport</code> y unidades relativas</li>
           </ul>
         </div>
-        <aside class="card">
-          <h3>Datos de contacto</h3>
-          <p>Mail: <a href="mailto:l.porolli@hotmail.com">l.porolli@hotmail.com</a></p>
-          <p>Instagram: <a href="https://instagram.com/lporolli" target="_blank" rel="noopener">@lporolli</a></p>
-          <p>WhatsApp: <a href="https://wa.me/5492644849224" target="_blank" rel="noopener">+54 9 2644849224</a></p>
-
-        </aside>
       </div>
     </section>
 
@@ -129,7 +123,7 @@
 
     <!-- Contacto -->
     <section id="contacto" class="section">
-      <div class="container two-col">
+      <div class="contacto-grid">
         <div>
           <h2>Contacto</h2>
           <form id="contactForm" class="form" novalidate>
@@ -146,14 +140,37 @@
             <p class="feedback" id="formFeedback" role="alert" aria-live="polite"></p>
           </form>
         </div>
-        <aside class="card">
-          <h3>También en</h3>
-          <ul class="links">
-            <li><a href="mailto:l.porolli@hotmail.com">Correo</a></li>
-            <li><a href="https://instagram.com/lporolli" target="_blank" rel="noopener">Instagram</a></li>
-            <li><a href="https://wa.me/5492644849224" target="_blank" rel="noopener">WhatsApp</a></li>
-          </ul>
-        </aside>
+        <div class="card-redes">
+          <h3>Mis Redes Sociales</h3>
+          <div class="redes-container">
+            <div class="red-social">
+              <div class="icono"><i class="fa-solid fa-envelope"></i></div>
+              <div class="texto">
+                <h4>Mail</h4>
+                <p>lporollimailsito</p>
+              </div>
+              <div class="flecha">➔</div>
+            </div>
+
+            <div class="red-social">
+              <div class="icono"><i class="fab fa-instagram"></i></div>
+              <div class="texto">
+                <h4>Instagram</h4>
+                <p><a href="https://www.instagram.com/lporolli" target="__blank">Conectar Ahora</a></p>
+              </div>
+              <div class="flecha">➔</div>
+            </div>
+
+            <div class="red-social">
+              <div class="icono"><i class="fa-brands fa-whatsapp"></i></div>
+              <div class="texto">
+                <h4>Whatsapp</h4>
+                <p><a href="https://wa.me/2644849224" target="__blank">Conectar Ahora</a></p>
+              </div>
+              <div class="flecha">➔</div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
