@@ -192,9 +192,9 @@ a:hover {
 /* aseguramos que el contenido quede sobre el fondo */
 .site-header, main, footer, .hero { position: relative; z-index: 1; }
 
-/* ===== Botón volver arriba fijo y visible ===== */
+/* Botón volver arriba fijo y visible */
 .to-top{
-  position: fixed;   /* antes estaba en el footer; ahora fijo en pantalla */
+  position: fixed;   
   right: 16px;
   bottom: 16px;
   text-decoration: none;
@@ -208,14 +208,14 @@ a:hover {
   transform: translateY(8px);
   transition: opacity .2s, transform .2s, visibility .2s;
 }
-
+/*Para mostrar boton para subir*/
 .to-top.show{
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
 }
 
-/* ===== Redes Sociales Card (versión panel + tarjetas internas) ===== */
+/*  Redes Sociales Card (versión panel + tarjetas internas)  */
 .contacto{
   min-height: 100vh;
   padding: 80px 20px;
@@ -236,7 +236,7 @@ a:hover {
 .contacto-grid > *{
   height: 100%;
 }
-
+/*in oklab sirve para mezclar colores*/
 .card-contacto {
   background: color-mix(in oklab, var(--card), transparent 6%);
   border: 1px solid var(--line);
@@ -387,4 +387,156 @@ a:hover {
 .card.testimonial {
   font-size: 1.2rem;
   text-align: center;
+}
+/* ====== RESPONSIVE OPTIMIZADO PARA MÓVILES ====== */
+
+/* Tablets y pantallas medianas */
+@media (max-width: 1024px) {
+  .nav {
+    padding: 10px 18px;
+  }
+
+  .nav-list {
+    gap: 20px;
+  }
+
+  .texto-inicio h1 {
+    font-size: 3em;
+  }
+
+  .imagen-inicio img {
+    max-width: 220px;
+  }
+}
+
+/* Móviles grandes */
+@media (max-width: 768px) {
+  /* NAVBAR */
+  .site-header {
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(10px);
+    padding: 10px 20px;
+  }
+
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 65px;
+    right: 20px;
+    width: 70%;
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(14px);
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 20px;
+    gap: 15px;
+    text-align: right;
+    z-index: 999;
+  }
+
+  .nav-list.show {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+    color: var(--color-texto);
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  .theme-toggle {
+    font-size: 1.3rem;
+    margin-left: 10px;
+  }
+
+  /* INICIO */
+  .contenido-inicio {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 25px;
+    padding-top: 80px;
+  }
+
+  .texto-inicio h1 {
+    font-size: 2.5em;
+  }
+
+  .texto-inicio p {
+    font-size: 1em;
+  }
+
+  .imagen-inicio img {
+    max-width: 160px;
+  }
+
+  /* BOTÓN SUBIR */
+  #btnTop {
+    width: 42px;
+    height: 42px;
+    bottom: 20px;
+    right: 20px;
+    font-size: 1rem;
+    display: flex !important; /* asegurar visibilidad */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+
+  /* FORMULARIO */
+  .form-container {
+    width: 90%;
+    padding: 25px;
+  }
+
+
+  /* CONTACTO */
+  .contacto-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .site-footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+  .hero-copy h1 {
+    font-size: 2em;
+  }
+
+  .hero-copy p {
+    font-size: 0.9em;
+  }
+
+  .boton-inicio {
+    font-size: 0.9em;
+    padding: 10px 18px;
+  }
+
+  .hero-card card {
+    max-width: 140px;
+  }
+
+  .nav {
+    width: 80%;
+    top: 60px;
+    right: 10px;
+  }
+
+  #to-top {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
 }

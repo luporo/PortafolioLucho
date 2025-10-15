@@ -51,13 +51,13 @@ if (form) {
     }
     // LocalStorage (bonus)
     localStorage.setItem('contacto', JSON.stringify({ nombre, email, mensaje: form.mensaje.value.trim() }));
-    feedback.textContent = '¡Mensaje listo para enviar! (demo)';
+    feedback.textContent = '¡Mensaje Enviado! ';
     feedback.style.color = '#166534';
     form.reset();
   });
 }
 
-// Año dinámico
+// Para que actializar el año de pie de pagina
 document.getElementById('year').textContent = new Date().getFullYear();
 
 // Tema claro/oscuro
@@ -72,7 +72,7 @@ if (themeToggle) {
   });
 }
 
-// ===== Fondo interactivo que sigue al cursor =====
+// Fondo interactivo que sigue al cursor 
 const root = document.documentElement;
 document.addEventListener('mousemove', (e) => {
   const x = (e.clientX / window.innerWidth) * 100;
@@ -81,7 +81,7 @@ document.addEventListener('mousemove', (e) => {
   root.style.setProperty('--my', `${y}%`);
 });
 
-// Soporte táctil: centra el foco al tocar
+// Soporte táctil: centra el foco al tocar(en celular)
 document.addEventListener('touchstart', (e) => {
   const t = e.touches[0];
   const x = (t.clientX / window.innerWidth) * 100;
